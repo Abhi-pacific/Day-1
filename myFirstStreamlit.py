@@ -12,7 +12,12 @@ if rawFile is not None:
 
     emp_data = df.parse('Emp LIst')
     data = df.parse('Raw')
-    data.drop(columns=['Tagging','Date','Time','OLMS ID','Unique','LOB'], inplace=True)
+    try:
+        data.drop(columns=['Tagging','Date','Time','OLMS ID','Unique','LOB'], inplace=True)
+    except:
+        pass
+
+    
     
    
     # """ Creating custom Columns """
